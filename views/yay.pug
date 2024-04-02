@@ -4,6 +4,15 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     link(rel='stylesheet', href='/errorpage/error.css')
+    script(async='', src='//cdn.trackdesk.com/tracking.js')
+    script.
+      (function(t,d,k){(t[k]=t[k]||[]).push(d);t[d]=t[d]||t[k].f||function(){(t[d].q=t[d].q||[]).push(arguments)}})(window,"trackdesk","TrackdeskObject");
+      trackdesk("saasmoneybaby", "conversion", {
+      "conversionType": "sale",
+      "amount": {
+      "value": "2"
+      }
+      });    
     title SUCCESS
   body
     .message-box
