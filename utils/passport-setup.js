@@ -7,7 +7,7 @@ passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     // callbackURL: "http://127.0.0.1:3000/users/googlecloud-webhook",
-    callbackURL: "https://puzzlebook-creator-online.onrender.com/users/googlecloud-webhook"
+    callbackURL: "https://pzbkcrreator.onrender.com/users/googlecloud-webhook"
 
 }, authController.passportCallback))
 
