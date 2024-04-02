@@ -1,0 +1,54 @@
+detail sidebar
+
+number of pages [50 - 400]
+include short tutorial [boolean]
+platform [kdp or lulu]
+page size depending on platform
+btn to start generation
+
+
+the main div should imbed a watermarked version of the pdf
+
+/downloading drivers (i guess) needed to load page
+// const browserFetcher = puppeteer.createBrowserFetcher();
+// let revisionInfo = await browserFetcher.download('1095492');
+// add the following line to the launch parameter object ---> executablePath: revisionInfo.executablePath,
+
+loading offline page to puppeteer
+const buildHTML = await fs.readFileSync('public/html/test.html', 'utf8');
+
+// create a new browser tab
+const page = await browser.newPage();
+await page.setViewport({ width: 1920, height: 1080 });
+
+// set page's html content with build's index.html
+const rez = await page.setContent(buildHTML);
+
+
+
+/**
+    takes screenshot of full page without scrolling
+await page.screenshot({ fullPage: true, path: './helpers/imgs/x_search.png' });
+    */
+
+// await page.screenshot({ path: './helpers/imgs/x_search.png' })
+
+lulu print book page sizes
+
+Pocket Book (4.25 x 6.875 in / 108 x 175 mm)
+Novella (5 x 8 in / 127 x 203 mm)
+Digest (5.5 x 8.5 in / 140 x 216 mm)
+A5 (5.83 x 8.27 in / 148 x 210 mm)
+US Trade (6 x 9 in / 152 x 229 mm)
+Royal (6.14 x 9.21 in / 156 x 234 mm)
+Executive (7 x 10 in / 178 x 254 mm)
+Crown Quarto (7.44 x 9.68 in / 189 x 246 mm)
+
+to add later
+Small Square (7.5 x 7.5 in / 190 x 190 mm)
+A4 (8.27 x 11.69 in / 210 x 297 mm)
+Square (8.5 x 8.5 in / 216 x 216 mm)
+US Letter (8.5 x 11 in / 216 x 279 mm)
+Small Landscape (9 x 7 in / 229 x 178 mm)
+US Letter Landscape (11 x 8.5 in / 279 x 216 mm)
+A4 Landscape (11.69 x 8.27 in / 297 x 210 mm)

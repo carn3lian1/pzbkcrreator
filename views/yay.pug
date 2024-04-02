@@ -1,0 +1,15 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='/errorpage/error.css')
+    title SUCCESS
+  body
+    .message-box
+      p you have bought a full subscription package on puzzle book creator
+      .buttons-con
+        .action-link-wrap
+          a.link-button.link-back-button(onclick='history.back(-1)') Go Back
+          a.link-button(href='/') Go to Home Page
+          a.link-button(href='/login') login

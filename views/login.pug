@@ -1,0 +1,56 @@
+doctype html
+html.light-style.customizer-hide(lang='en', dir='ltr', data-theme='theme-default', data-assets-path='/assets/', data-template='vertical-menu-template-free')
+  head
+    title Puzzlebook creator online Login
+    include _pages_head
+  body
+    // Content
+    .container-xxl
+      .authentication-wrapper.authentication-basic.container-p-y
+        .authentication-inner
+          // Register
+          .card
+            .card-body
+              // Logo
+              .app-brand.justify-content-center
+                a.app-brand-link.gap-2(href='index.html')
+                  span.app-brand-logo.demo
+                    img.img-fluid(src='/homepage/images/logo.png', alt='logo')
+              // /Logo
+              h4.mb-2 Welcome to puzzlebook creator online! &#x1F44B;
+              p.mb-4 Please sign-in to your account and start the adventure
+              form
+                .mb-3
+                  label.form-label(for='email') Email
+                  input#auth_email.form-control(type='text', name='email-username', placeholder='Enter your email', autofocus='' required)
+                .mb-3.form-password-toggle
+                  .d-flex.justify-content-between
+                    label.form-label(for='password') Password
+                    a(href='/forgotpw')
+                      small Forgot Password?
+                  .input-group.input-group-merge
+                    input#auth_password.form-control(type='password',name='password', placeholder='············', aria-describedby='password' required)
+                    span.input-group-text.cursor-pointer
+                      i.bx.bx-hide
+                .mb-3
+                  .form-check
+                    input#remember-me.form-check-input(type='checkbox')
+                    label.form-check-label(for='remember-me')  Remember Me 
+                .mb-3
+                  button#auth_login.btn.btn-primary.d-grid.w-100(type='submit') Sign in
+                p.text-center
+                  br
+                  span or
+                a#social_login_btn.btn.btn-danger.d-grid.w-100(href='/users/gplus-auth') Sign in with google                  
+              p.text-center
+                span New on our platform?
+                a(href='/signup')
+                  span Create an account
+              p#error.text-center
+                span please enter all the data required above!
+              p#signInMessages.text-center
+                span
+      
+    script(src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js')
+    script(src="/js/login.js") 
+    include _scripts

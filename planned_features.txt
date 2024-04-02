@@ -1,0 +1,13 @@
+1. increase the puzzle collection to 1000
+2. make interactive puzzle games for some/ all of the puzzles (websockets)
+3. add realtime chat to the puzzle games or support (websockets)
+4. add pdf editing where a user can edit the resulting manuscript to add images, annotations, text etc
+5. make app work on other publishing platfroms, not just lulu and kdp
+6. connect to a print on demand service that i can sell puzzlebooks directly to customers instead of using publishing platfroms
+7. create a cover creator where a user can create pdf covers like in canva
+8. create pricing tiers to for these new features
+9. add a way to add themed designs to pages to make the puzzlebooks look nicer
+10. create a youtube tutorial channel to showcase all features
+11. get the UI redesigned with a singular color scheme
+12. add a blog with SEO friendly content
+13. collaborative editing for manuscript and covers

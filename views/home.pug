@@ -1,0 +1,406 @@
+doctype html
+html(lang='en')
+  head
+    title Puzzlebook Creator Online
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(title= 'Puzzlebook Creator Online')
+    meta(name='description', content='puzzlebook creator online to make formatted puzzlebooks for KDP, Etsy, LULU etc')
+    meta(name='keywords', content='kdp, etsy, puzzles, puzzlebook, creator, crossword, word search, maze, cryptogram, fillomino, hashi, kenken, arithmagon, masyu, 5770951815, binary, kakuro, cryptic crossword, hitori, kakurasu, nonogram, math squares, nurikabe, reverse word search, shakashaka, shikaku, shingoki, slitherLink, stitches,')
+    meta(name='google-site-verification' content='L44f2NO1_hu5MD0fmvd9nrV88UXz7z-QajA03e_2Mec')
+    meta(name="robots" content="index, follow")
+    meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+    meta(name="language" content="English")
+    meta(name="cryptomus" content="1756b514")  
+    // Font
+    link(rel='dns-prefetch', href='//fonts.googleapis.com')
+    link(href='https://fonts.googleapis.com/css?family=Rubik:300,400,500', rel='stylesheet')
+    // Bootstrap CSS
+    link(rel='stylesheet', href='/homepage/css/bootstrap.min.css')
+    // Themify Icons
+    link(rel='stylesheet', href='/homepage/css/themify-icons.css')
+    // Owl carousel
+    link(rel='stylesheet', href='/homepage/css/owl.carousel.min.css')
+    // Main css
+    link(href='/homepage/css/style.css', rel='stylesheet')
+  body(data-spy='scroll', data-target='#navbar', data-offset='30')
+    // Nav Menu
+    .nav-menu.fixed-top
+      .container
+        .row
+          .col-md-12
+            nav.navbar.navbar-dark.navbar-expand-lg
+              a.navbar-brand(href='/')
+                img.img-fluid(src='/homepage/images/logo.png', alt='logo')
+              |  
+              button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbar', aria-controls='navbar', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+              #navbar.collapse.navbar-collapse
+                ul.navbar-nav.ml-auto
+                  li.nav-item
+                    a.nav-link.active(href='#home')
+                      | HOME 
+                      span.sr-only (current)
+                  li.nav-item
+                    a.nav-link(href='#features') PUZZLES
+                  li.nav-item
+                    a.nav-link(href='#manual') MANUAL
+                  li.nav-item
+                    a.nav-link(href='#gallery') GALLERY
+                  li.nav-item
+                    a.nav-link(href='/blog') BLOG                    
+                  li.nav-item
+                    a.nav-link(href='/pricing') PRICING
+                  li.nav-item
+                    if user
+                      a.btn.btn-outline-light.my-3.my-sm-0.ml-lg-3(href='/catalog') catalog
+                    else  
+                      a.btn.btn-outline-light.my-3.my-sm-0.ml-lg-3(href='/login') login
+    header#home.bg-gradient
+      .container.mt-5
+        h1 PDF Puzzle book creator online
+        p.tagline
+          | The one and only solution for creating unique PDF puzzle book manuscripts for KDP, LULU publishing, Etsy and other platforms
+      .img-holder.mt-3
+        img.img-fluid(src='/homepage/images/home_img_1.png', alt='phone')
+    .client-logos.my-5
+      .container.text-center
+        img.img-fluid(src='/homepage/images/client-logos.png', alt='client logos')
+    #features.section.light-bg
+      .container
+        .section-title
+          small HIGHLIGHTS
+          h3 List of puzzles to choose from
+          .row
+            each puzzle in puzzleList
+                .col-12.col-lg-4
+                  .card.features
+                    .card-body
+                      .media
+                        //- span.ti-face-smile.gradient-fill.ti-3x.mr-3
+                        .media-body
+                          h4.card-title= puzzle.name
+                          p.card-text= puzzle.short_desc
+          h3 and so many more to come...
+        p  
+        a.btn.btn-success.btn-lg.btn-block(href='/login') get started                
+    // // end .section
+    .section
+      .container
+        .row
+          .col-lg-6.offset-lg-6
+            .box-icon
+              span.ti-mobile.gradient-fill.ti-3x
+            h2 How to use puzzlebook creator online
+            p.mb-3
+              | you can create 2 types of puzzzlebooks:
+            p.mb-3
+              |1. a pdf manuscript consting of a single type of puzzle
+            p.mb-3
+              |2. a pdf manuscript consisting of an assortment of puzzles
+            a.btn.btn-primary(href='#manual') Read more...
+        .perspective-phone
+          img.img-fluid(src='/homepage/images/puzzle_img_3.png', alt='perspective phone')
+    // // end .section
+    .section.light-bg
+      .container
+        .section-title#manual
+          //- small FEATURES
+          h3 Use our puzzle book generator to make money in the following way
+        ul.nav.nav-tabs.nav-justified(role='tablist')
+          li.nav-item
+            a.nav-link.active(data-toggle='tab', href='#communication') 1. select
+          li.nav-item
+            a.nav-link(data-toggle='tab', href='#schedule') 2. customise
+          li.nav-item
+            a.nav-link(data-toggle='tab', href='#messages') 3. generate
+          li.nav-item
+            a.nav-link(data-toggle='tab', href='#livechat') 4. sell
+        .tab-content
+          #communication.tab-pane.fade.show.active
+            .d-flex.flex-column.flex-lg-row
+              img.img-fluid.rounded.align-self-start.mr-lg-5.mb-5.mb-lg-0(src='/homepage/images/graphic.png', alt='graphic')
+              div
+                h2 Select the puzzles you want in your manuscript
+                p.lead After logging into your account, you can do one of two things:
+                p
+                |1. click on a single puzzle to make a puzzlebook consisting on the selected puzzle
+                p 
+                |2. use the checkboxes to select all the puzzles you would like in your puzzle book
+                p
+                |if you select option number 1, your puzzlebook will consist of a single type of puzzle
+                p
+                |if you select  option number 2, your puzzle book will consist of the types of puzzles you have selected.
+                p
+                |with option 2, the algorithm will decide the number and placement of each puzzle on the pages. You will not be able to decide this but you can edit it in post
+
+          #schedule.tab-pane.fade
+            .d-flex.flex-column.flex-lg-row
+              div
+                h2 Customise your manuscript as you'd like
+                p.lead After clicking on the big green button, you will be taken to the customisation page
+                p
+                |1. enter the number of pages between 100 to 400
+                p
+                |2. select whether or not you would like the manuscript to includea tutorial
+                p
+                 
+                |3. select which platform you would like to publish the manuscript on
+                |this will help in calculating the margins, bleed settings and all other necessary things that the platform requires of submitted manuscripts
+                p
+                |4. select the dimensions of your manuscript
+
+                p 
+                | CLICK GENERATE AND WAIT FOR A FEW MOMENTS!
+              img.img-fluid.rounded.align-self-start.mr-lg-5.mb-5.mb-lg-0(src='/homepage/images/graphic.png', alt='graphic')
+          #messages.tab-pane.fade
+            .d-flex.flex-column.flex-lg-row
+              img.img-fluid.rounded.align-self-start.mr-lg-5.mb-5.mb-lg-0(src='/homepage/images/graphic.png', alt='graphic')
+              div
+                h2 Generate your PDF manuscript
+                p.lead After clicking the generate button. The online puzzlebook creator does everything for you
+                p you have to wait a few moments for the puzzlebook creator to finish generating the book for you
+                p it may take a minute or 2 depending on the puzzle types and the number of pages you've chosen
+                p the more complex the book, the longer it will take.
+                p At most, it shouldn't take more than a few minutes. Just be patient!
+          #livechat.tab-pane.fade
+            .d-flex.flex-column.flex-lg-row
+              div
+                h2 upload to KDP and start making money
+                p.lead This is the final step!
+                p 
+                |The manuscript generated is ready to upload to KDP (or whichever platform you chose)
+                p 
+                  |All you need to do is open a KDP account, upload all necessary data and publish!
+              
+              img.img-fluid.rounded.align-self-start.mr-lg-5.mb-5.mb-lg-0(src='/homepage/images/graphic.png', alt='graphic')
+        p  
+        a.btn.btn-success.btn-lg.btn-block(href='/login') get started
+
+    .section
+      .container
+        .row
+          h2 after creating a free account on puzzlebook creator online, follow the following steps to generate a puzzlebook
+          img(src='/homepage/images/info.png')
+          //- iframe(width='1280' height='630' src='https://www.youtube.com/embed/tgbNymZ7vqY?controls=0')
+    
+        p  
+        a.btn.btn-success.btn-lg.btn-block(href='/login') get started    
+    .section.light-bg
+      .container
+        .row
+          .col-md-8.d-flex.align-items-center
+            ul.list-unstyled.ui-steps
+              li.media
+                .circle-icon.mr-4 1
+                .media-body
+                  h5 Create an Account
+                  p
+                    | create an account to get access to the login of puzzles that puzzlebook creator online has
+              li.media.my-4
+                .circle-icon.mr-4 2
+                .media-body
+                  h5 Create your manuscript
+                  p
+                    | Select the puzzle you want, choose the number of pages and dimensions you need and click the generate button
+              li.media
+                .circle-icon.mr-4 3
+                .media-body
+                  h5 Upload and profit
+                  p
+                    | after downloading the manuscript, you can either upload it as is or make whichever edits you need before uploading to KDP, Etsy etc.
+          .col-md-4
+            img.img-fluid(src='/homepage/images/puzzle_img_2.png', alt='iphone')
+
+        p  
+        a.btn.btn-success.btn-lg.btn-block(href='/login') get started  
+        
+    .section
+      .container
+        .section-title
+          small TESTIMONIALS
+          h3 What our Customers say
+        .testimonials.owl-carousel
+          .testimonials-single
+            img.client-img(src='/homepage/images/client1.jpeg', alt='client')
+            blockquote.blockquote
+              | "I absolutely love using the Puzzlebook Creator online! It's incredibly user-friendly and makes creating puzzles a breeze. Such a convenient tool for puzzle enthusiasts like me!"
+            h5.mt-4.mb-2 Brittany
+            p.text-primary United Kingdom
+          .testimonials-single
+            img.client-img(src='/homepage/images/client2.jpeg', alt='client')
+            blockquote.blockquote
+              | "I can't believe how quickly I was able to create a puzzle book with Puzzlebook Creator! It used to take me weeks, but now it's a matter of hours. This tool has been a game-changer for me, and I'm thrilled with the efficiency it brings to my puzzle book projects."
+            h5.mt-4.mb-2 Crystal
+            p.text-primary United States
+          .testimonials-single
+            img.client-img(src='/homepage/images/client3.jpeg', alt='client')
+            blockquote.blockquote
+              | "Creating a complete puzzle book for just $7 using Puzzlebook Creator is an absolute steal! It's a fraction of what I used to spend on designers and the weeks of manual work. This tool has not only saved me a ton of time but also made publishing on KDP so much more affordable. Highly recommend it to anyone looking to create quality puzzle books without breaking the bank!"
+            h5.mt-4.mb-2 Darlene
+            p.text-primary United Arab Emirates
+    // // end .section
+    #gallery.section.light-bg
+      .container
+        .section-title
+          small GALLERY
+          h3 Puzzlebook Creator Online Screenshots
+        .img-gallery.owl-carousel.owl-theme
+          img(src='/homepage/images/s1.png', alt='image')
+          img(src='/homepage/images/s2.png', alt='image')
+          img(src='/homepage/images/s3.png', alt='image')
+          img(src='/homepage/images/s4.png', alt='image')
+          img(src='/homepage/images/s5.png', alt='image')
+          img(src='/homepage/images/s6.png', alt='image')
+          img(src='/homepage/images/s7.png', alt='image')
+          img(src='/homepage/images/s8.png', alt='image')
+          img(src='/homepage/images/s9.png', alt='image')
+          img(src='/homepage/images/s10.png', alt='image')
+          img(src='/homepage/images/s11.png', alt='image')
+        p  
+        a.btn.btn-success.btn-lg.btn-block(href='/login') get started
+
+    #pricing.section
+      .container
+        //- .section-title
+        //-   small PRICING
+        //-   h3 Upgrade to Pro
+        //- .card-deck
+        //-   .card.pricing
+        //-     .card-head
+        //-       small.text-primary PERSONAL
+        //-       span.price
+        //-         | $14
+        //-         sub /m
+        //-     ul.list-group.list-group-flush
+        //-       .list-group-item 10 Projects
+        //-       .list-group-item 5 GB Storage
+        //-       .list-group-item Basic Support
+        //-       .list-group-item
+        //-         del Collaboration
+        //-       .list-group-item
+        //-         del Reports and analytics
+        //-     .card-body
+        //-       a.btn.btn-primary.btn-lg.btn-block(href='#') Choose this Plan
+        //-   .card.pricing.popular
+        //-     .card-head
+        //-       small.text-primary FOR TEAMS
+        //-       span.price
+        //-         | $29
+        //-         sub /m
+        //-     ul.list-group.list-group-flush
+        //-       .list-group-item Unlimited Projects
+        //-       .list-group-item 100 GB Storage
+        //-       .list-group-item Priority Support
+        //-       .list-group-item Collaboration
+        //-       .list-group-item Reports and analytics
+        //-     .card-body
+        //-       a.btn.btn-primary.btn-lg.btn-block(href='#') Choose this Plan
+        //-   .card.pricing
+        //-     .card-head
+        //-       small.text-primary ENTERPRISE
+        //-       span.price
+        //-         | $249
+        //-         sub /m
+        //-     ul.list-group.list-group-flush
+        //-       .list-group-item Unlimited Projects
+        //-       .list-group-item Unlimited Storage
+        //-       .list-group-item Collaboration
+        //-       .list-group-item Reports and analytics
+        //-       .list-group-item Web hooks
+        //-     .card-body
+        //-       a.btn.btn-primary.btn-lg.btn-block(href='#') Choose this Plan
+        // // end .pricing
+        // // end .section
+        .section.pt-0
+          .container
+            .section-title
+              small FAQ
+              h3 Frequently Asked Questions
+            .row.pt-4
+              .col-md-6
+                h4.mb-3 Can I try before I buy?
+                p.light-font.mb-5
+                  | Puzzlebook creator generates a free watermarked preview of the whole manuscript that you can view and test out before paying for the whole manuscript. You see what you will get before proceeding
+              .col-md-6 
+                h4.mb-3 What payment methods do you accept?
+                p.light-font.mb-5
+                  | For now just paypal
+              .col-md-6
+                h4.mb-3 Can I change my plan later?
+                p.light-font.mb-5
+                  | We dont have pricing plans, you can pay for the full manuscript after viewing the watermarked version
+              .col-md-6    
+                h4.mb-3 What is this preview manuscript?
+                p.light-font.mb-5
+                  | Puzzlebook creator generates a watermarked version of your manuscript that you can view, test to see if it will be accepted to your platform of choice. If you find the results satisfactory, you can spend a measly $7 to get the full manuscript downloaded to your computer
+              .col-md-6    
+                h4.mb-3 In future, will I have access to the manuscripts i buy?
+                p.light-font.mb-5 
+                  | Absolutely! You will be able to download full versions of manuscripts you've paid for from the login
+              .col-md-6
+                h4.mb-3 Can I contact support for questions or issues that might pop up?
+                p.light-font.mb-5
+                  |You can use any one of the communication channels listed below. Someone will get back to you in no time!
+        p  
+        a.btn.btn-success.btn-lg.btn-block(href='/login') get started
+        p
+
+        .section.bg-gradient.hidden
+          .container
+            .call-to-action
+              .box-icon
+                span.ti-mobile.gradient-fill.ti-3x
+              h2 Download Anywhere
+              p.tagline
+                | Available for all major mobile and desktop platforms. Rapidiously visualize optimal ROI rather than enterprise-wide methods of empowerment.
+              .my-4
+                a.btn.btn-light(href='#')
+                  img(src='/homepage/images/appleicon.png', alt='icon')
+                  |  App Store
+                a.btn.btn-light(href='#')
+                  img(src='/homepage/images/playicon.png', alt='icon')
+                  |  Google play
+              p.text-primary
+                small
+                  i *Works on iOS 10.0.5+, Android Kitkat and above. 
+        // // end .section
+        #contact.light-bg.py-5
+          .container
+            .row
+              .col-lg-6.text-center.text-lg-left
+                p.mb-2
+                  span.ti-location-pin.mr-2
+                  |  1485 Pacific St, Brooklyn, NY 11216 USA
+                .d-block.d-sm-inline-block
+                  p.mb-2
+                    span.ti-email.mr-2
+                    |  
+                    a.mr-4(href='mailto:puzzlebookcreator@gmail.com') puzzlebookcreator@gmail.com
+                .d-block.d-sm-inline-block
+                  p.mb-0
+                    span.ti-headphone-alt.mr-2
+                    |  
+                    a(href='tel:6987934324') 123-234-124321
+              .col-lg-6
+                .social-icons
+                  a(href='#')
+                    span.ti-facebook
+                  a(href='#')
+                    span.ti-twitter-alt
+                  a(href='#')
+                    span.ti-instagram
+        // // end .section
+        footer.my-5.text-center
+          //- small
+          //-   a.m-2(href='#') PRESS
+          //-   a.m-2(href='#') TERMS
+          //-   a.m-2(href='#') PRIVACY
+          // jQuery and Bootstrap
+          script(src='homepage/js/jquery-3.2.1.min.js')
+          script(src='homepage/js/bootstrap.bundle.min.js')
+          // Plugins JS
+          script(src='homepage/js/owl.carousel.min.js')
+          // Custom JS
+          script(src='homepage/js/script.js')

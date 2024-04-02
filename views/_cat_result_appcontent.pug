@@ -1,0 +1,39 @@
+.app-content
+    .app-content-header
+        h2.app-content-headerText here is your upload ready manuscript! Use it to test on KDP etc before buying full version
+        br 
+        p#error Attention: Please download full manuscipts immediately after purchase since we aren't saving them in the database!
+        button.mode-switch(title='Switch Theme')
+            svg.moon(fill='none', stroke='currentColor', stroke-linecap='round', stroke-linejoin='round', stroke-width='2', width='24', height='24', viewBox='0 0 24 24')
+                defs
+                path(d='M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z')
+    .container
+        if data.type
+            main.contentobject(href=data.full_path, type='application/pdf', width='100%', height='900px')
+                p
+                    object(data=data.full_path, type='application/pdf', width='100%', height='900px')
+
+            .sidebar#result_sidebar
+                p#result_msg your document is ready!
+                a#prev_dl_btn.btn.btn-border-3(href=data.full_path) Download full manuscript
+                p 
+
+        else 
+            main.contentobject(href=data.prev_path, type='application/pdf', width='100%', height='900px')
+                p
+
+                    a(href=data.prev_path) preview link.
+                    object(data=data.prev_path, type='application/pdf', width='100%', height='900px')
+                p
+                    a(href=data.prev_path) Download.
+                
+            .sidebar#result_sidebar
+                p#result_msg your document is ready!
+                a#prev_dl_btn.btn.btn-border-3(href=data.prev_path) Download Preview Copy
+                p 
+                a#full_dl_btn.btn4.btn-border-4(href="/orderpage/single") Buy Full Manuscript.
+
+                            p 
+                a#full_dl_btn.btn.btn-border-3(href="https://app.box.com/file/1326056123928?s=afqq1xugcku1avi388kjrk9nbwpl6lly") Download Sample Full manuscript
+
+script(src='/js/catalog_result.js')

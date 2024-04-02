@@ -1,0 +1,177 @@
+[
+    {
+        "size": "10.16x15.24",
+        "fontSize": 14,
+        "bleed": true,
+        "page_margins": [
+            {
+                "top": 10,
+                "bottom": 10,
+                "right": 10,
+                "left": 10
+            }
+        ],
+        "image": {
+            "square": {
+                "offset": {
+                    "x": 35,
+                    "y": 35
+                },
+                "fit": {
+                    "width": 210,
+                    "height": 210
+                }
+            },
+            "rectangle": {
+                "offset": {
+                    "x": 35,
+                    "y": 35
+                },
+                "dimensions": {
+                    "width": 210,
+                    "height": 320
+                }
+            }
+        }
+    },
+    {
+        "size": "12.7x20.32",
+        "fontSize": 18,
+        "bleed": true,
+        "page_margins": [
+            {
+                "top": 10,
+                "bottom": 10,
+                "right": 10,
+                "left": 10
+            }
+        ],
+        "image": {
+            "square": {
+                "offset": {
+                    "x": 35,
+                    "y": 35
+                },
+                "fit": {
+                    "width": 280,
+                    "height": 280
+                }
+            },
+            "rectangle": {
+                "offset": {
+                    "x": 35,
+                    "y": 35
+                },
+                "dimensions": {
+                    "width": 280,
+                    "height": 460
+                }
+            }
+        }
+    },
+    {
+        "size": "13.34x20.32",
+        "fontSize": 18,
+        "bleed": true,
+        "page_margins": [
+            {
+                "top": 10,
+                "bottom": 10,
+                "right": 10,
+                "left": 10
+            }
+        ],
+        "image": {
+            "square": {
+                "offset": {
+                    "x": 35,
+                    "y": 35
+                },
+                "fit": {
+                    "width": 300,
+                    "height": 300
+                }
+            },
+            "rectangle": {
+                "offset": {
+                    "x": 35,
+                    "y": 35
+                },
+                "dimensions": {
+                    "width": 300,
+                    "height": 450
+                }
+            }
+        }
+    },
+    {
+        "size": "13.97x21.59",
+        "fontSize": 18,
+        "bleed": true,
+        "page_margins": [
+            {
+                "top": 10,
+                "bottom": 10,
+                "right": 10,
+                "left": 10
+            }
+        ],
+        "image": {
+            "square": {
+                "offset": {
+                    "x": 35,
+                    "y": 35
+                },
+                "fit": {
+                    "width": 300,
+                    "height": 300
+                }
+            },
+            "rectangle": {
+                "offset": {
+                    "x": 35,
+                    "y": 35
+                },
+                "dimensions": {
+                    "width": 300,
+                    "height": 330
+                }
+            }
+        }
+    },
+    {
+        "size": "15.24x22.86",
+        "fontSize": 18,
+        "bleed": true,
+        "page_margins": [
+            {
+                "top": 10,
+                "bottom": 10,
+                "right": 10,
+                "left": 10
+            }
+        ],
+        "image": {
+            "square": {
+                "offset": {
+                    "x": 35,
+                    "y": 35
+                },
+                "fit": {
+                    "width": 350,
+                    "height": 350
+                }
+            },
+            "rectangle": {
+                "offset": {
+                    "x": 35,
+                    "y": 35
+                },
+                "dimensions": {
+                    "width": 350,
+                    "height": 480
+                }
+            }
+        }
+    }
+]

@@ -1,0 +1,47 @@
+.app-content
+    .app-content-header
+        h2#pageInfo.app-content-headerText these are the puzzles you chose from the previous step
+        button.mode-switch(title='Switch Theme')
+            svg.moon(fill='none', stroke='currentColor', stroke-linecap='round', stroke-linejoin='round', stroke-width='2', width='24', height='24', viewBox='0 0 24 24')
+                defs
+                path(d='M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z')
+    .container
+        main.content#detail_container
+            main.grid
+                each puzzleObj in puzzleList
+
+                    article
+                        img(src=`${puzzleObj.img}`, alt='category_img')
+                        .text
+                            h3= puzzleObj.name
+                            p= puzzleObj.desc
+                    
+        // Replace <div> with <aside> if your content has one aside. For more than one, nest <aside> elements in the <div>.
+        .sidebar#manuscript_sidebar
+            //- button#generate_manu_test  TEST GENERATE
+            p#error.text-center
+            label(for='pageNum') Number of pages
+            br
+            input.pageNuminput#pageNum(type='number', value=250  name='pageNum')
+            br
+            label(for='pageNum') Include tutorial?
+            form
+                input#yes(type='radio', name='age', value='yes')
+                label(for='yes') yes
+                p
+                input#no(type='radio', name='age', value='no' checked)
+                label(for='no') no
+                br
+            .select-menu
+                .select-btn
+                    span.sBtn-text Select Platform
+                    i.bx.bx-chevron-down
+                ul.options
+                    li.option
+                        i.bx.bxl-instagram-alt(style='color: #E1306C;')
+                        span.option-text Amazon KDP
+                    //- li.option
+                    //-     i.bx.bxl-linkedin-square(style='color: #0E76A8;')
+                    //-     span.option-text LULU
+            br
+//- script(src='/js/catalog_detail.js')

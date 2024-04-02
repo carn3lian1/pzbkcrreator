@@ -1,0 +1,85 @@
+x1. make app work even when using normal authentication
+x2. all downloads should go to unique folders per user
+ie when a pdf is generated, instead of being saved to puzzle_prev_manuscripts,
+create a temporary nested folder, save the file(s) and delete the file after use
+the name of the folder be the request.user.id for ease of use
+x3a. move from developer tokens to long lasting tokens for the box SDK
+x3b. write a script that automates the acquisition of new access tokens
+x4. when a person is logged in, make the home page, and auth pages redirect to the dashboard
+x5a. create a good error page for various errors e.g 404s 504s extract
+x5b. make the various errors render said error page instead of posting json
+x6. add a sidebar option for all purchased manuscripts and links to download
+x7. finish out the dashboard with all required links eg logout
+x8. edit the landing page with proper content
+9. get designs for pages that the user can have the option to choose
+10. add tutorial sections for the manuscripts
+11. start marketing on reddit and fb
+12. formulate an SEO strategy
+13. implement rate limiting and a content security policy
+14. make sure all inputs are well sanitized to avoid unwanted values e.g scripts where strings are needed
+15. create an admin account
+16. increase the puzzle collection to 30
+17. make the app work on render.com
+18. make a script that periodically removes generatedManuscripts from all users
+19. delete the content on box and return the scripts to get new unique images
+20. create images and a video tutorial for the homepage
+21. make a pages for instagram, fb and YT for the app
+22. set up a cronjob that deletes the priew manucript folder every now and then to avoid the filesystem from getting clogged
+23. once user buys book, save the details of the manuscript to the db so that user can regenerate the manuscript if they ever need to
+24. create a lulu dimensionsObj
+
+2
+-make sure folder is empty or non-existent before starting generation process
+-create a temp folder wth the name as the request.user.id in these folders
+    - puzzleOutput/full_manuscript_folder
+    - public/assets/puzzle_prev_manuscripts
+    - puzzleOutput/dl
+- all the files will go in appropriate temp folder
+- delete temp folder with contents after generation/upload/purchase    
+    
+things to test in the auth flow and general app:
+--is social auth working?
+--is manual auth working?
+--are the auth messages kevin erica accident kenya
+--which page is the user redirected to after login?
+--which page is the user redirected to after logout?
+--what happens if the signup/login buttons are pressed in quick succession?
+--what happens when the server/db doesnt repond in time?
+--is placeholder text and images replaced from auth pages?
+--area all inputs from the auth pages sanitised?
+--is the dashboard inputs sanitized and proper messages (errors and otherwise) set?
+--does manuscript generation work with both types of authentication?
+--is the temp user folder situation working properly
+are cron jobs set up for token refreshing and the home page to keep app alive?
+
+https://www.puzzlebaron.com/puzzles/
+https://www.puzzles-to-print.com/
+http://www.clarity-media.co.uk/list-of-puzzles.php
+https://www.puzzler.com/online-puzzles/backwords
+https://www.puzzle-nurikabe.com/
+
+maze
+fillomino
+sudoku http://sudoku99.com/
+hashi https://www.kakuro-online.com/hashi/
+kakuro https://www.kakuro-online.com/generator
+maysu https://www.kakuro-online.com/masyu/
+binary http://binarypuzzle.com/puzzles.php?size=12&level={random.randint(1, 4)}&nr={random.randint(1, 200)}'
+arithmagon https://freeprintablepuzzles.co.uk/arithmagons/square/
+math squares https://puzzlemaker.discoveryeducation.com/math-squares
+kenken https://api.razzlepuzzles.com/calcudoku
+wordsearch https://tools.atozteacherstuff.com/word-search-maker/wordsearch.php
+reverse word searches https://rws.puzzlebaron.com/play.php
+cryptogram https://cryptograms.puzzlebaron.com/play.php
+cryptic crosswords https://simplydailypuzzles.com/daily-cryptic/index.html?puzz=dc1-2022-01-01
+crossword https://puzzlemaker.discoveryeducation.com/criss-cross
+
+
+
+complete the bible verses https://bible-api.com/
+mandala
+connect the dots
+
+https://random-word-api.herokuapp.com/word?number=20&length=10
+
+
