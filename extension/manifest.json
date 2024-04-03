@@ -1,7 +1,7 @@
 {
     "name": "KDP puzzle book creator online",
     "description": "puzzle book creator for KDP and Etsy entrepreneurs",
-    "version": "0.0.0.5",
+    "version": "0.0.0.6",
     "manifest_version": 3,
     "icons": {
         "16": "./res/icon16.png",

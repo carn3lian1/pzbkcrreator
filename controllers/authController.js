@@ -50,6 +50,7 @@ exports.protect = async (request, response, next) => {
         if (currentUser === "manual" && currentUser.passwordChangedAfter(decoded.iat)) return response.status(401).render("errorpage", { data: { status: 400, message: "sorry! password mismatch!" } })
 
         //5.
+
         request.user = currentUser
 
         response.locals.user = currentUser

@@ -291,11 +291,11 @@ document.addEventListener("click", function (e) {
 
 
     if (gentarget) {
-        openTab("https://puzzlebook-creator-online.onrender.com/catalog")
+        openTab("https://pzbkcrreator.onrender.com/catalog")
     }
 
     else if (logintarget) {
-        openTab("https://puzzlebook-creator-online.onrender.com/login")
+        openTab("https://pzbkcrreator.onrender.com/login")
     }
 
     else if (backtarget) {

@@ -13,7 +13,7 @@ chrome.runtime.onInstalled.addListener(async function (details) {
 
 
 async function cookieChecker(cb) {
-    let res = await chrome.cookies.getAll({ url: "https://puzzlebook-creator-online.onrender.com/" })
+    let res = await chrome.cookies.getAll({ url: "https://pzbkcrreator.onrender.com/" })
 
     for (let i in res) {
         if (res[i]["name"] === "Auth_Cookie") {
